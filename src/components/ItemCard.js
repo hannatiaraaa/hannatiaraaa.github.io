@@ -14,13 +14,15 @@ import {
   Button,
 } from "@material-ui/core";
 
-import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 380,
-    margin: "2vw",
+    marginLeft: "2vw",
+    marginRight: "2vw",
+    marginTop: "1vh",
+    marginBottom: "1vh",
   },
   media: {
     height: "50vh",

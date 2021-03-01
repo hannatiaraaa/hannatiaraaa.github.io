@@ -1,6 +1,5 @@
-.App {
+body {
   background: #0f3854;
   background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
-  height: 200vh;
-  width: 120vw;
+  background-size: 100%;
 }
