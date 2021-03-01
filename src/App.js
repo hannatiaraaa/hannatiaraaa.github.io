@@ -47,7 +47,7 @@ function App() {
         subtitle="1 week"
         content="A movie application for mobile that we can find interesting informations and reviews relating to the popular movie based on its genre with API from backend and TMDB (using redux saga)."
         image={movEImage}
-        href="https://gitlab.com/binar-10-mini-project/team-e/team-e-react-native"
+        href="https://gitlab.com/hannatiaraaa/move"
       />
 
       <ItemCard
