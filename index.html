@@ -21,30 +21,30 @@
         padding: 0;
         box-sizing: border-box;
       }
+      html {
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       body {
         background: #0f3854;
         background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        width: 100vw;
-        height: 90vh;
         padding: 1rem 5rem;
-        overflow: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        gap: 4rem;
       }
       h1 {
         font-weight: 800;
         font-size: 8vw;
         color: var(--light-text);
       }
-      @media (min-width: 768px) {
-        h1 {
-          font-size: 8rem; /* 128px */
-          line-height: 8.5rem;
-        }
-      }
-      p {
+      p,
+      .hire-lg {
         color: white;
         font-size: 1.5rem; /* 24px */
         line-height: 2rem;
@@ -53,8 +53,6 @@
       .hire {
         text-decoration: none;
         color: #121216;
-        font-size: 1.5rem; /* 24px */
-        line-height: 1.75rem;
         font-weight: 700;
         padding: 0.75rem 2rem;
         border: 2px solid var(--primary-button);
@@ -63,7 +61,6 @@
         border-radius: 6.25rem; /* 100px */
         margin-left: 0.25rem;
       }
-
       .hire:hover,
       .hire:focus,
       .hire:active {
@@ -71,7 +68,6 @@
         background: transparent;
         box-shadow: 0 0 12px -2px var(--light-text);
       }
-
       .hire:hover {
         text-decoration: none;
         color: var(--primary-button);
@@ -80,10 +76,41 @@
         box-shadow: 0 0 2px -2px var(--light-text);
         cursor: pointer;
       }
-
       .hire:active,
       .hire:hover:after {
         transform: translate(10%, 20%);
+      }
+      .hire-sm {
+        display: none;
+      }
+
+      @media all and (max-width: 1280px) {
+        body {
+          padding: 1rem 2rem;
+        }
+        h1 {
+          font-size: 3rem; /* 64px */
+          line-height: 3.25rem;
+        }
+        .hire-lg {
+          display: none;
+        }
+        .hire-sm {
+          display: block;
+          width: fit-content;
+          margin-top: 1rem;
+        }
+      }
+
+      @media all and (max-width: 767px) {
+        p,
+        .hire-sm {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+        p {
+          font-weight: 500;
+        }
       }
     </style>
     <script>
@@ -92,14 +119,22 @@
   </head>
   <body onload="window.location.replace('https://hannatiaraaa.vercel.app/')">
     <h1>Welcome to Hanna's personal website</h1>
-    <p>
-      This page has been moved. If you are not redirected within 3 seconds
+    <div>
+      <p>
+        This page has been moved. If you are not redirected within 3 seconds
+        <a
+          href="https://hannatiaraaa.vercel.app/"
+          class="hire hire-lg"
+        >
+          <span>Go to new website</span>
+        </a>
+      </p>
       <a
         href="https://hannatiaraaa.vercel.app/"
-        class="hire"
+        class="hire hire-sm"
       >
-        <span>Go to new website</span>
-      </a>
-    </p>
+        <span>Go to new website</span></a
+      >
+    </div>
   </body>
 </html>
