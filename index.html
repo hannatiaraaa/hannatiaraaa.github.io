@@ -8,14 +8,98 @@
     />
     <meta
       http-equiv="refresh"
-      content="delay_time; URL=https://hannatiaraaa.vercel.app/"
+      content="0; url='https://hannatiaraaa.vercel.app/'"
     />
     <title>Hanna</title>
+    <style>
+      :root {
+        --light-text: #cee6f6;
+        --primary-button: #fbd22c;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0f3854;
+        background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100vw;
+        height: 90vh;
+        padding: 1rem 5rem;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 8vw;
+        color: var(--light-text);
+      }
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 8rem; /* 128px */
+          line-height: 8.5rem;
+        }
+      }
+      p {
+        color: white;
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem;
+        font-weight: 600;
+      }
+      .hire {
+        text-decoration: none;
+        color: #121216;
+        font-size: 1.5rem; /* 24px */
+        line-height: 1.75rem;
+        font-weight: 700;
+        padding: 0.75rem 2rem;
+        border: 2px solid var(--primary-button);
+        background: var(--primary-button);
+        transition: all 0.4s;
+        border-radius: 6.25rem; /* 100px */
+        margin-left: 0.25rem;
+      }
+
+      .hire:hover,
+      .hire:focus,
+      .hire:active {
+        border: 2px solid var(--primary-button);
+        background: transparent;
+        box-shadow: 0 0 12px -2px var(--light-text);
+      }
+
+      .hire:hover {
+        text-decoration: none;
+        color: var(--primary-button);
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+        box-shadow: 0 0 2px -2px var(--light-text);
+        cursor: pointer;
+      }
+
+      .hire:active,
+      .hire:hover:after {
+        transform: translate(10%, 20%);
+      }
+    </style>
+    <script>
+      window.location.replace('https://hannatiaraaa.vercel.app/');
+    </script>
   </head>
-  <body>
+  <body onload="window.location.replace('https://hannatiaraaa.vercel.app/')">
+    <h1>Welcome to Hanna's personal website</h1>
     <p>
-      This page has been moved. If you are not redirected within 3 seconds, click
-      <a href="https://hannatiaraaa.vercel.app/">here</a> to go to the HubSpot homepage.
+      This page has been moved. If you are not redirected within 3 seconds
+      <a
+        href="https://hannatiaraaa.vercel.app/"
+        class="hire"
+      >
+        <span>Go to new website</span>
+      </a>
     </p>
   </body>
 </html>
